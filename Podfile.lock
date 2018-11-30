@@ -1,0 +1,47 @@
+PODS:
+  - ConvivaAVFoundation (3.0.3):
+    - ConvivaCore (= 3.0.3)
+  - ConvivaCore (3.0.3)
+  - Freddy (3.0.3)
+  - RxAtomic (4.4.0)
+  - RxAVFoundation (2.1.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.0):
+    - RxAtomic (~> 4.4)
+  - SnapKit (4.2.0)
+
+DEPENDENCIES:
+  - ConvivaAVFoundation
+  - Freddy
+  - RxAVFoundation
+  - RxCocoa
+  - RxSwift
+  - SnapKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ConvivaAVFoundation
+    - ConvivaCore
+    - Freddy
+    - RxAtomic
+    - RxAVFoundation
+    - RxCocoa
+    - RxSwift
+    - SnapKit
+
+SPEC CHECKSUMS:
+  ConvivaAVFoundation: 6c7dc47d1e754890a003aa113e2bcbcc1b256f66
+  ConvivaCore: 13d04b36aa0339b99991d64d5e6b816568912bb8
+  Freddy: 7c62db262a0d0e3b3e2b8b40f2c0cc51e122fbc4
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxAVFoundation: 468e7278138c717582ae2355115d5ae081b8a16a
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+
+PODFILE CHECKSUM: 3df2360ee2d88734576e88fb7ad81f5dcb8e7598
+
+COCOAPODS: 1.6.0.beta.2

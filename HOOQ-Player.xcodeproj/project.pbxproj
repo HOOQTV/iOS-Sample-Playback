@@ -1,0 +1,925 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A5CF0F0CE22C36D6A0E6D15 /* Pods_HOOQ_PlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29B3CF8A4BEA2773F81C323 /* Pods_HOOQ_PlayerTests.framework */; };
+		386806979B5F7E1BB7C2EF1D /* Pods_HOOQ_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34FFFA2C184B2265AA6F7F7 /* Pods_HOOQ_Player.framework */; };
+		3AE38DA567F6F96CB81EC20B /* Pods_HOOQ_PlayerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFAC469CC3CCED1B1AA5C99F /* Pods_HOOQ_PlayerUITests.framework */; };
+		C9031D1120DA648100A5DA08 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9031D1020DA648100A5DA08 /* AVKit.framework */; };
+		C9031D1320DA648500A5DA08 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9031D1220DA648500A5DA08 /* AVFoundation.framework */; };
+		C90A198420E0A32D00F071FD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90A198320E0A32D00F071FD /* CoreMedia.framework */; };
+		C90A198620E0A33400F071FD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90A198520E0A33400F071FD /* SystemConfiguration.framework */; };
+		C90A198820E0A33D00F071FD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90A198720E0A33C00F071FD /* MobileCoreServices.framework */; };
+		C90A198A20E0A34400F071FD /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90A198920E0A34400F071FD /* CoreTelephony.framework */; };
+		C918299820DCDA7F00F2B4CD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C918299720DCDA7F00F2B4CD /* ViewController.xib */; };
+		C93107F420E1ECAE0000A6F9 /* HQPlayerConvivaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93107EE20E1ECAE0000A6F9 /* HQPlayerConvivaManager.swift */; };
+		C93107F520E1ECAE0000A6F9 /* FairPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93107F120E1ECAE0000A6F9 /* FairPlayer.swift */; };
+		C93107F620E1ECAE0000A6F9 /* HQAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93107F320E1ECAE0000A6F9 /* HQAPIManager.swift */; };
+		C93107FE20E1F1EF0000A6F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93107FD20E1F1EE0000A6F9 /* LaunchScreen.storyboard */; };
+		C9C814DB20DA257900D02FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C814DA20DA257900D02FAD /* AppDelegate.swift */; };
+		C9C814E220DA257B00D02FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C814E120DA257B00D02FAD /* Assets.xcassets */; };
+		C9C814F020DA257C00D02FAD /* HOOQ_PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C814EF20DA257C00D02FAD /* HOOQ_PlayerTests.swift */; };
+		C9C814FB20DA257C00D02FAD /* HOOQ_PlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C814FA20DA257C00D02FAD /* HOOQ_PlayerUITests.swift */; };
+		E60D38A221ABD69100EC402B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60D389E21ABD69000EC402B /* ViewController.swift */; };
+		E60D38A321ABD69100EC402B /* HQLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60D38A021ABD69000EC402B /* HQLoginViewController.swift */; };
+		E60D38A421ABD69100EC402B /* HQLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60D38A121ABD69000EC402B /* HQLoginView.swift */; };
+		E653BB3921083BE600A7C5ED /* HQPlayerViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E653BB3821083BE600A7C5ED /* HQPlayerViewControler.swift */; };
+		E69309D821198BAC006178BA /* player_bottom_ovelay.png in Resources */ = {isa = PBXBuildFile; fileRef = E69309D321198BAB006178BA /* player_bottom_ovelay.png */; };
+		E69309D921198BAC006178BA /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = E69309D421198BAB006178BA /* Contents.json */; };
+		E69309DA21198BAC006178BA /* player_top_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = E69309D621198BAC006178BA /* player_top_overlay.png */; };
+		E69309DD2119A5D7006178BA /* HQPlayerSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69309DC2119A5D7006178BA /* HQPlayerSlider.swift */; };
+		E69309DF211AE5AF006178BA /* HQAVPlayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69309DE211AE5AF006178BA /* HQAVPlayerExtension.swift */; };
+		E6D8FE6120FC779500CA7984 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D8FE6020FC779400CA7984 /* Constants.swift */; };
+		E6D8FE6620FC779D00CA7984 /* FPSAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D8FE6320FC779D00CA7984 /* FPSAsset.swift */; };
+		E6D8FE6720FC779D00CA7984 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D8FE6420FC779D00CA7984 /* SessionManager.swift */; };
+		E6D8FE6820FC779D00CA7984 /* VideoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D8FE6520FC779D00CA7984 /* VideoStore.swift */; };
+		E6D9B7AA2118528C00F601D9 /* HQPlayFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D9B7A92118528C00F601D9 /* HQPlayFooterView.swift */; };
+		E6EF3E772112F26C000AB700 /* HQAssetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EF3E702112F26C000AB700 /* HQAssetModel.swift */; };
+		E6EF3E782112F26C000AB700 /* HQPlayerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EF3E712112F26C000AB700 /* HQPlayerSettingsView.swift */; };
+		E6EF3E7A2112F26C000AB700 /* HQPlayerOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EF3E732112F26C000AB700 /* HQPlayerOptionView.swift */; };
+		E6EF3E7B2112F26C000AB700 /* HQPlayerSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EF3E742112F26C000AB700 /* HQPlayerSettingsViewModel.swift */; };
+		E6EF3E7C2112F26C000AB700 /* HQAVPlayerItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EF3E752112F26C000AB700 /* HQAVPlayerItemExtension.swift */; };
+		E6EF3E7D2112F26C000AB700 /* HQPlayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EF3E762112F26C000AB700 /* HQPlayHeaderView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9C814EC20DA257C00D02FAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9C814CF20DA257900D02FAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9C814D620DA257900D02FAD;
+			remoteInfo = "HOOQ-Player";
+		};
+		C9C814F720DA257C00D02FAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9C814CF20DA257900D02FAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9C814D620DA257900D02FAD;
+			remoteInfo = "HOOQ-Player";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		67A7B94E1829D56907C72A77 /* Pods-HOOQ-Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOOQ-Player.release.xcconfig"; path = "Pods/Target Support Files/Pods-HOOQ-Player/Pods-HOOQ-Player.release.xcconfig"; sourceTree = "<group>"; };
+		A34FFFA2C184B2265AA6F7F7 /* Pods_HOOQ_Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HOOQ_Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFAC469CC3CCED1B1AA5C99F /* Pods_HOOQ_PlayerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HOOQ_PlayerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B76F1A581D53E09AD7F1729B /* Pods-HOOQ-PlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOOQ-PlayerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HOOQ-PlayerTests/Pods-HOOQ-PlayerTests.release.xcconfig"; sourceTree = "<group>"; };
+		C9031D1020DA648100A5DA08 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		C9031D1220DA648500A5DA08 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C90A198320E0A32D00F071FD /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		C90A198520E0A33400F071FD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C90A198720E0A33C00F071FD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C90A198920E0A34400F071FD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C918299720DCDA7F00F2B4CD /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		C93107EE20E1ECAE0000A6F9 /* HQPlayerConvivaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQPlayerConvivaManager.swift; sourceTree = "<group>"; };
+		C93107F120E1ECAE0000A6F9 /* FairPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairPlayer.swift; sourceTree = "<group>"; };
+		C93107F320E1ECAE0000A6F9 /* HQAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQAPIManager.swift; sourceTree = "<group>"; };
+		C93107FD20E1F1EE0000A6F9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9C814D720DA257900D02FAD /* HOOQ-Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HOOQ-Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C814DA20DA257900D02FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9C814E120DA257B00D02FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9C814E620DA257B00D02FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9C814EB20DA257C00D02FAD /* HOOQ-PlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HOOQ-PlayerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C814EF20DA257C00D02FAD /* HOOQ_PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOOQ_PlayerTests.swift; sourceTree = "<group>"; };
+		C9C814F120DA257C00D02FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9C814F620DA257C00D02FAD /* HOOQ-PlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HOOQ-PlayerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C814FA20DA257C00D02FAD /* HOOQ_PlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOOQ_PlayerUITests.swift; sourceTree = "<group>"; };
+		C9C814FC20DA257C00D02FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD5C2D6C393BB716BBF84427 /* Pods-HOOQ-Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOOQ-Player.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HOOQ-Player/Pods-HOOQ-Player.debug.xcconfig"; sourceTree = "<group>"; };
+		DA023A45229A664CA3C06E7C /* Pods-HOOQ-PlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOOQ-PlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HOOQ-PlayerUITests/Pods-HOOQ-PlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DCB949A1396EEA2A7CACF445 /* Pods-HOOQ-PlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOOQ-PlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HOOQ-PlayerTests/Pods-HOOQ-PlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E60D389E21ABD69000EC402B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E60D38A021ABD69000EC402B /* HQLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLoginViewController.swift; sourceTree = "<group>"; };
+		E60D38A121ABD69000EC402B /* HQLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLoginView.swift; sourceTree = "<group>"; };
+		E653BB3821083BE600A7C5ED /* HQPlayerViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQPlayerViewControler.swift; sourceTree = "<group>"; };
+		E69309D321198BAB006178BA /* player_bottom_ovelay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_bottom_ovelay.png; sourceTree = "<group>"; };
+		E69309D421198BAB006178BA /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		E69309D621198BAC006178BA /* player_top_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_top_overlay.png; sourceTree = "<group>"; };
+		E69309D721198BAC006178BA /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		E69309DC2119A5D7006178BA /* HQPlayerSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQPlayerSlider.swift; sourceTree = "<group>"; };
+		E69309DE211AE5AF006178BA /* HQAVPlayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQAVPlayerExtension.swift; sourceTree = "<group>"; };
+		E6D8FE6020FC779400CA7984 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "HOOQ-Player/Constants.swift"; sourceTree = "<group>"; };
+		E6D8FE6320FC779D00CA7984 /* FPSAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPSAsset.swift; sourceTree = "<group>"; };
+		E6D8FE6420FC779D00CA7984 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		E6D8FE6520FC779D00CA7984 /* VideoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoStore.swift; sourceTree = "<group>"; };
+		E6D9B7A92118528C00F601D9 /* HQPlayFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQPlayFooterView.swift; sourceTree = "<group>"; };
+		E6EF3E702112F26C000AB700 /* HQAssetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQAssetModel.swift; sourceTree = "<group>"; };
+		E6EF3E712112F26C000AB700 /* HQPlayerSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQPlayerSettingsView.swift; sourceTree = "<group>"; };
+		E6EF3E732112F26C000AB700 /* HQPlayerOptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQPlayerOptionView.swift; sourceTree = "<group>"; };
+		E6EF3E742112F26C000AB700 /* HQPlayerSettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQPlayerSettingsViewModel.swift; sourceTree = "<group>"; };
+		E6EF3E752112F26C000AB700 /* HQAVPlayerItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQAVPlayerItemExtension.swift; sourceTree = "<group>"; };
+		E6EF3E762112F26C000AB700 /* HQPlayHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQPlayHeaderView.swift; sourceTree = "<group>"; };
+		EFDA63AF8177E8A412AFF3EA /* Pods-HOOQ-PlayerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOOQ-PlayerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HOOQ-PlayerUITests/Pods-HOOQ-PlayerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F29B3CF8A4BEA2773F81C323 /* Pods_HOOQ_PlayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HOOQ_PlayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9C814D420DA257900D02FAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C90A198A20E0A34400F071FD /* CoreTelephony.framework in Frameworks */,
+				C90A198820E0A33D00F071FD /* MobileCoreServices.framework in Frameworks */,
+				C90A198620E0A33400F071FD /* SystemConfiguration.framework in Frameworks */,
+				C90A198420E0A32D00F071FD /* CoreMedia.framework in Frameworks */,
+				C9031D1320DA648500A5DA08 /* AVFoundation.framework in Frameworks */,
+				C9031D1120DA648100A5DA08 /* AVKit.framework in Frameworks */,
+				386806979B5F7E1BB7C2EF1D /* Pods_HOOQ_Player.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C814E820DA257C00D02FAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A5CF0F0CE22C36D6A0E6D15 /* Pods_HOOQ_PlayerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C814F320DA257C00D02FAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE38DA567F6F96CB81EC20B /* Pods_HOOQ_PlayerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C307932E7FB70A2D080D809D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD5C2D6C393BB716BBF84427 /* Pods-HOOQ-Player.debug.xcconfig */,
+				67A7B94E1829D56907C72A77 /* Pods-HOOQ-Player.release.xcconfig */,
+				DCB949A1396EEA2A7CACF445 /* Pods-HOOQ-PlayerTests.debug.xcconfig */,
+				B76F1A581D53E09AD7F1729B /* Pods-HOOQ-PlayerTests.release.xcconfig */,
+				DA023A45229A664CA3C06E7C /* Pods-HOOQ-PlayerUITests.debug.xcconfig */,
+				EFDA63AF8177E8A412AFF3EA /* Pods-HOOQ-PlayerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C9031D0F20DA648000A5DA08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C90A198920E0A34400F071FD /* CoreTelephony.framework */,
+				C90A198720E0A33C00F071FD /* MobileCoreServices.framework */,
+				C90A198520E0A33400F071FD /* SystemConfiguration.framework */,
+				C90A198320E0A32D00F071FD /* CoreMedia.framework */,
+				C9031D1220DA648500A5DA08 /* AVFoundation.framework */,
+				C9031D1020DA648100A5DA08 /* AVKit.framework */,
+				A34FFFA2C184B2265AA6F7F7 /* Pods_HOOQ_Player.framework */,
+				F29B3CF8A4BEA2773F81C323 /* Pods_HOOQ_PlayerTests.framework */,
+				AFAC469CC3CCED1B1AA5C99F /* Pods_HOOQ_PlayerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C93107EC20E1ECAE0000A6F9 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				E60D389D21ABD69000EC402B /* Discover */,
+				E60D389F21ABD69000EC402B /* Login */,
+				E6EF3E6F2112F26C000AB700 /* HQPlayer */,
+				E6D8FE6220FC779D00CA7984 /* Download */,
+				C93107ED20E1ECAE0000A6F9 /* Conviva */,
+				C93107F020E1ECAE0000A6F9 /* FairPlay */,
+				C93107F220E1ECAE0000A6F9 /* API */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		C93107ED20E1ECAE0000A6F9 /* Conviva */ = {
+			isa = PBXGroup;
+			children = (
+				C93107EE20E1ECAE0000A6F9 /* HQPlayerConvivaManager.swift */,
+			);
+			path = Conviva;
+			sourceTree = "<group>";
+		};
+		C93107F020E1ECAE0000A6F9 /* FairPlay */ = {
+			isa = PBXGroup;
+			children = (
+				C93107F120E1ECAE0000A6F9 /* FairPlayer.swift */,
+			);
+			path = FairPlay;
+			sourceTree = "<group>";
+		};
+		C93107F220E1ECAE0000A6F9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C93107F320E1ECAE0000A6F9 /* HQAPIManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		C9C814CE20DA257900D02FAD = {
+			isa = PBXGroup;
+			children = (
+				E6D8FE6020FC779400CA7984 /* Constants.swift */,
+				C9C814D920DA257900D02FAD /* HOOQ-Player */,
+				C9C814EE20DA257C00D02FAD /* HOOQ-PlayerTests */,
+				C9C814F920DA257C00D02FAD /* HOOQ-PlayerUITests */,
+				C9C814D820DA257900D02FAD /* Products */,
+				C9031D0F20DA648000A5DA08 /* Frameworks */,
+				C307932E7FB70A2D080D809D /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		C9C814D820DA257900D02FAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9C814D720DA257900D02FAD /* HOOQ-Player.app */,
+				C9C814EB20DA257C00D02FAD /* HOOQ-PlayerTests.xctest */,
+				C9C814F620DA257C00D02FAD /* HOOQ-PlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9C814D920DA257900D02FAD /* HOOQ-Player */ = {
+			isa = PBXGroup;
+			children = (
+				C9C814DA20DA257900D02FAD /* AppDelegate.swift */,
+				C918299720DCDA7F00F2B4CD /* ViewController.xib */,
+				C93107EC20E1ECAE0000A6F9 /* Code */,
+				C9C814E120DA257B00D02FAD /* Assets.xcassets */,
+				E69309D221198BAB006178BA /* player_bottom_ovelay.imageset */,
+				E69309D521198BAC006178BA /* player_top_overlay.imageset */,
+				C9C814E620DA257B00D02FAD /* Info.plist */,
+				C93107FD20E1F1EE0000A6F9 /* LaunchScreen.storyboard */,
+			);
+			path = "HOOQ-Player";
+			sourceTree = "<group>";
+		};
+		C9C814EE20DA257C00D02FAD /* HOOQ-PlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9C814EF20DA257C00D02FAD /* HOOQ_PlayerTests.swift */,
+				C9C814F120DA257C00D02FAD /* Info.plist */,
+			);
+			path = "HOOQ-PlayerTests";
+			sourceTree = "<group>";
+		};
+		C9C814F920DA257C00D02FAD /* HOOQ-PlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C9C814FA20DA257C00D02FAD /* HOOQ_PlayerUITests.swift */,
+				C9C814FC20DA257C00D02FAD /* Info.plist */,
+			);
+			path = "HOOQ-PlayerUITests";
+			sourceTree = "<group>";
+		};
+		E60D389D21ABD69000EC402B /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				E60D389E21ABD69000EC402B /* ViewController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		E60D389F21ABD69000EC402B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E60D38A021ABD69000EC402B /* HQLoginViewController.swift */,
+				E60D38A121ABD69000EC402B /* HQLoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E69309D221198BAB006178BA /* player_bottom_ovelay.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				E69309D321198BAB006178BA /* player_bottom_ovelay.png */,
+				E69309D421198BAB006178BA /* Contents.json */,
+			);
+			name = player_bottom_ovelay.imageset;
+			path = Assets.xcassets/player_bottom_ovelay.imageset;
+			sourceTree = "<group>";
+		};
+		E69309D521198BAC006178BA /* player_top_overlay.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				E69309D621198BAC006178BA /* player_top_overlay.png */,
+				E69309D721198BAC006178BA /* Contents.json */,
+			);
+			name = player_top_overlay.imageset;
+			path = Assets.xcassets/player_top_overlay.imageset;
+			sourceTree = "<group>";
+		};
+		E6D8FE6220FC779D00CA7984 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				E6D8FE6320FC779D00CA7984 /* FPSAsset.swift */,
+				E6D8FE6420FC779D00CA7984 /* SessionManager.swift */,
+				E6D8FE6520FC779D00CA7984 /* VideoStore.swift */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		E6EF3E6F2112F26C000AB700 /* HQPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				E653BB3821083BE600A7C5ED /* HQPlayerViewControler.swift */,
+				E6EF3E702112F26C000AB700 /* HQAssetModel.swift */,
+				E6EF3E732112F26C000AB700 /* HQPlayerOptionView.swift */,
+				E6EF3E712112F26C000AB700 /* HQPlayerSettingsView.swift */,
+				E6EF3E742112F26C000AB700 /* HQPlayerSettingsViewModel.swift */,
+				E6EF3E752112F26C000AB700 /* HQAVPlayerItemExtension.swift */,
+				E6EF3E762112F26C000AB700 /* HQPlayHeaderView.swift */,
+				E6D9B7A92118528C00F601D9 /* HQPlayFooterView.swift */,
+				E69309DC2119A5D7006178BA /* HQPlayerSlider.swift */,
+				E69309DE211AE5AF006178BA /* HQAVPlayerExtension.swift */,
+			);
+			path = HQPlayer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9C814D620DA257900D02FAD /* HOOQ-Player */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C814FF20DA257C00D02FAD /* Build configuration list for PBXNativeTarget "HOOQ-Player" */;
+			buildPhases = (
+				F6603C30B90DF7E25581E7EB /* [CP] Check Pods Manifest.lock */,
+				C9C814D320DA257900D02FAD /* Sources */,
+				C9C814D420DA257900D02FAD /* Frameworks */,
+				C9C814D520DA257900D02FAD /* Resources */,
+				16F80F9EAAD61E51269AE580 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HOOQ-Player";
+			productName = "HOOQ-Player";
+			productReference = C9C814D720DA257900D02FAD /* HOOQ-Player.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9C814EA20DA257C00D02FAD /* HOOQ-PlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C8150220DA257C00D02FAD /* Build configuration list for PBXNativeTarget "HOOQ-PlayerTests" */;
+			buildPhases = (
+				D1C830B4A5393C0E00296A50 /* [CP] Check Pods Manifest.lock */,
+				C9C814E720DA257C00D02FAD /* Sources */,
+				C9C814E820DA257C00D02FAD /* Frameworks */,
+				C9C814E920DA257C00D02FAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9C814ED20DA257C00D02FAD /* PBXTargetDependency */,
+			);
+			name = "HOOQ-PlayerTests";
+			productName = "HOOQ-PlayerTests";
+			productReference = C9C814EB20DA257C00D02FAD /* HOOQ-PlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9C814F520DA257C00D02FAD /* HOOQ-PlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C8150520DA257C00D02FAD /* Build configuration list for PBXNativeTarget "HOOQ-PlayerUITests" */;
+			buildPhases = (
+				B1C570E075CA3BEC29922A5A /* [CP] Check Pods Manifest.lock */,
+				C9C814F220DA257C00D02FAD /* Sources */,
+				C9C814F320DA257C00D02FAD /* Frameworks */,
+				C9C814F420DA257C00D02FAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9C814F820DA257C00D02FAD /* PBXTargetDependency */,
+			);
+			name = "HOOQ-PlayerUITests";
+			productName = "HOOQ-PlayerUITests";
+			productReference = C9C814F620DA257C00D02FAD /* HOOQ-PlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9C814CF20DA257900D02FAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = HOOQ;
+				TargetAttributes = {
+					C9C814D620DA257900D02FAD = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					C9C814EA20DA257C00D02FAD = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = C9C814D620DA257900D02FAD;
+					};
+					C9C814F520DA257C00D02FAD = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = C9C814D620DA257900D02FAD;
+					};
+				};
+			};
+			buildConfigurationList = C9C814D220DA257900D02FAD /* Build configuration list for PBXProject "HOOQ-Player" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9C814CE20DA257900D02FAD;
+			productRefGroup = C9C814D820DA257900D02FAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9C814D620DA257900D02FAD /* HOOQ-Player */,
+				C9C814EA20DA257C00D02FAD /* HOOQ-PlayerTests */,
+				C9C814F520DA257C00D02FAD /* HOOQ-PlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9C814D520DA257900D02FAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E69309D921198BAC006178BA /* Contents.json in Resources */,
+				E69309DA21198BAC006178BA /* player_top_overlay.png in Resources */,
+				C9C814E220DA257B00D02FAD /* Assets.xcassets in Resources */,
+				C93107FE20E1F1EF0000A6F9 /* LaunchScreen.storyboard in Resources */,
+				C918299820DCDA7F00F2B4CD /* ViewController.xib in Resources */,
+				E69309D821198BAC006178BA /* player_bottom_ovelay.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C814E920DA257C00D02FAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C814F420DA257C00D02FAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16F80F9EAAD61E51269AE580 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HOOQ-Player/Pods-HOOQ-Player-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Freddy/Freddy.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAVFoundation/RxAVFoundation.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Freddy.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAVFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HOOQ-Player/Pods-HOOQ-Player-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1C570E075CA3BEC29922A5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HOOQ-PlayerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1C830B4A5393C0E00296A50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HOOQ-PlayerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6603C30B90DF7E25581E7EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HOOQ-Player-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9C814D320DA257900D02FAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6EF3E772112F26C000AB700 /* HQAssetModel.swift in Sources */,
+				E6EF3E7C2112F26C000AB700 /* HQAVPlayerItemExtension.swift in Sources */,
+				E6EF3E7D2112F26C000AB700 /* HQPlayHeaderView.swift in Sources */,
+				E69309DF211AE5AF006178BA /* HQAVPlayerExtension.swift in Sources */,
+				C93107F420E1ECAE0000A6F9 /* HQPlayerConvivaManager.swift in Sources */,
+				E6D8FE6620FC779D00CA7984 /* FPSAsset.swift in Sources */,
+				E60D38A321ABD69100EC402B /* HQLoginViewController.swift in Sources */,
+				E653BB3921083BE600A7C5ED /* HQPlayerViewControler.swift in Sources */,
+				E6EF3E7B2112F26C000AB700 /* HQPlayerSettingsViewModel.swift in Sources */,
+				E6EF3E7A2112F26C000AB700 /* HQPlayerOptionView.swift in Sources */,
+				E60D38A221ABD69100EC402B /* ViewController.swift in Sources */,
+				C93107F520E1ECAE0000A6F9 /* FairPlayer.swift in Sources */,
+				C9C814DB20DA257900D02FAD /* AppDelegate.swift in Sources */,
+				E6D9B7AA2118528C00F601D9 /* HQPlayFooterView.swift in Sources */,
+				E6D8FE6820FC779D00CA7984 /* VideoStore.swift in Sources */,
+				C93107F620E1ECAE0000A6F9 /* HQAPIManager.swift in Sources */,
+				E60D38A421ABD69100EC402B /* HQLoginView.swift in Sources */,
+				E6D8FE6720FC779D00CA7984 /* SessionManager.swift in Sources */,
+				E69309DD2119A5D7006178BA /* HQPlayerSlider.swift in Sources */,
+				E6D8FE6120FC779500CA7984 /* Constants.swift in Sources */,
+				E6EF3E782112F26C000AB700 /* HQPlayerSettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C814E720DA257C00D02FAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C814F020DA257C00D02FAD /* HOOQ_PlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C814F220DA257C00D02FAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C814FB20DA257C00D02FAD /* HOOQ_PlayerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9C814ED20DA257C00D02FAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9C814D620DA257900D02FAD /* HOOQ-Player */;
+			targetProxy = C9C814EC20DA257C00D02FAD /* PBXContainerItemProxy */;
+		};
+		C9C814F820DA257C00D02FAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9C814D620DA257900D02FAD /* HOOQ-Player */;
+			targetProxy = C9C814F720DA257C00D02FAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C9C814FD20DA257C00D02FAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C9C814FE20DA257C00D02FAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9C8150020DA257C00D02FAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD5C2D6C393BB716BBF84427 /* Pods-HOOQ-Player.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HOOQ-Player",
+				);
+				INFOPLIST_FILE = "HOOQ-Player/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tv.HOOQ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fe457f88-5f41-4662-9042-a2566aa46006";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C9C8150120DA257C00D02FAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67A7B94E1829D56907C72A77 /* Pods-HOOQ-Player.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HOOQ-Player",
+				);
+				INFOPLIST_FILE = "HOOQ-Player/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tv.HOOQ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7d586e3e-a494-4791-845a-59dd8a1e0866";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C9C8150320DA257C00D02FAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCB949A1396EEA2A7CACF445 /* Pods-HOOQ-PlayerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q378LCLGKT;
+				INFOPLIST_FILE = "HOOQ-PlayerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tv.HOOQ.HOOQ-PlayerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HOOQ-Player.app/HOOQ-Player";
+			};
+			name = Debug;
+		};
+		C9C8150420DA257C00D02FAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B76F1A581D53E09AD7F1729B /* Pods-HOOQ-PlayerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q378LCLGKT;
+				INFOPLIST_FILE = "HOOQ-PlayerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tv.HOOQ.HOOQ-PlayerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HOOQ-Player.app/HOOQ-Player";
+			};
+			name = Release;
+		};
+		C9C8150620DA257C00D02FAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA023A45229A664CA3C06E7C /* Pods-HOOQ-PlayerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q378LCLGKT;
+				INFOPLIST_FILE = "HOOQ-PlayerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tv.HOOQ.HOOQ-PlayerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "HOOQ-Player";
+			};
+			name = Debug;
+		};
+		C9C8150720DA257C00D02FAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFDA63AF8177E8A412AFF3EA /* Pods-HOOQ-PlayerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q378LCLGKT;
+				INFOPLIST_FILE = "HOOQ-PlayerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tv.HOOQ.HOOQ-PlayerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "HOOQ-Player";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9C814D220DA257900D02FAD /* Build configuration list for PBXProject "HOOQ-Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C814FD20DA257C00D02FAD /* Debug */,
+				C9C814FE20DA257C00D02FAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9C814FF20DA257C00D02FAD /* Build configuration list for PBXNativeTarget "HOOQ-Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C8150020DA257C00D02FAD /* Debug */,
+				C9C8150120DA257C00D02FAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9C8150220DA257C00D02FAD /* Build configuration list for PBXNativeTarget "HOOQ-PlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C8150320DA257C00D02FAD /* Debug */,
+				C9C8150420DA257C00D02FAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9C8150520DA257C00D02FAD /* Build configuration list for PBXNativeTarget "HOOQ-PlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C8150620DA257C00D02FAD /* Debug */,
+				C9C8150720DA257C00D02FAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9C814CF20DA257900D02FAD /* Project object */;
+}
