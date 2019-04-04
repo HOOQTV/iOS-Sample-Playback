@@ -118,6 +118,7 @@ extension HQPlayerViewController {
     
     private func stopPlayer()  {
         player?.replaceCurrentItem(with: nil)
+        player?.rate = 0.0
         hooqPlayerConvivaManager.clearConvivaSession()
     }
     
