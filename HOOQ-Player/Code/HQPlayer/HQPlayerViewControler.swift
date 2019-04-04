@@ -25,7 +25,9 @@ final class HQPlayerViewController: AVPlayerViewController {
     private lazy var model = HQPlayerSettingsViewModel(with: videoItem.textTrack, audioList: videoItem.audioTrack!)
     private var currentPlayerState: PlayerState = .play
     private let disposeBag = DisposeBag()
-
+    
+    fileprivate let hooqPlayerConvivaManager = HQPlayerConvivaManager.shared
+    
     private var heartBeatTimer = Timer()
     let videoContentId: String = ""
     
@@ -116,6 +118,7 @@ extension HQPlayerViewController {
     
     private func stopPlayer()  {
         player?.replaceCurrentItem(with: nil)
+        hooqPlayerConvivaManager.clearConvivaSession()
     }
     
     private func initializePlayer() {
@@ -186,6 +189,8 @@ extension HQPlayerViewController {
 
     private func startPlayer()  {
         if let player = player {
+            hooqPlayerConvivaManager.attachHOOQlayerToSession(avplayer: player)
+            currentPlayerState = .play
             player.play()
         }
     }

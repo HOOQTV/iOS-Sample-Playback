@@ -12,11 +12,12 @@ import AVFoundation
 import Freddy
 
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-    fileprivate let hooqPlayerConvivaManager = HQPlayerConvivaManager()
+    fileprivate let hooqPlayerConvivaManager = HQPlayerConvivaManager.shared
     fileprivate var player = AVPlayer.init(playerItem: nil)
     private var testMagic: Magic?
     
     var selectedContentId = ""
+    var selectedContentTitle = ""
     var license: String = ""
     var manifest: String = ""
     
@@ -95,6 +96,7 @@ extension ViewController {
     func tableView(_ tableView : UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedContentId = contentIdArray[indexPath.row] as! String
         let title = contentNameArray[indexPath.row] as! String
+        selectedContentTitle = title
         callPlayAPI(contentId: selectedContentId, title: title)
     }
 }

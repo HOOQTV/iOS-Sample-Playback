@@ -14,6 +14,8 @@ import AVFoundation
 
 class HQPlayerConvivaManager: NSObject {
     
+    static let shared = HQPlayerConvivaManager()
+    
     var session : ConvivaLightSession! // Conviva Session object
     var convivaMetadata : ConvivaContentInfo! // Conviva Session Metadata
     var customMetaTags : NSMutableDictionary!
@@ -36,10 +38,17 @@ class HQPlayerConvivaManager: NSObject {
     }
     
     func attachHOOQlayerToSession(avplayer:AVPlayer) -> Void {
-        if (avplayer.isKind(of: AVPlayer.self) && self.session != nil) {
-            //if (avplayer.conforms(to: ConvivaProxyFactory.self)) {
+        if avplayer.isKind(of: AVPlayer.self) {
+            if self.session != nil {
                 self.session.attachStreamer(avplayer)
+            } else {
+                print("no Conviva Session")
+            }
+            //if (avplayer.conforms(to: ConvivaProxyFactory.self)) {
+            
             //}
+        } else {
+            print("AVPlayer error")
         }
     }
     
