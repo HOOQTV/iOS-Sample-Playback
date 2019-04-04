@@ -18,8 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let settingsData = [Constants.KEY.GATEWAY_URL: Constants.VALUE.GATEWAY_URL]
-        LivePass.initWithCustomerKey(Constants.KEY.CUSTOMER,
-                                     andSettings: settingsData)
+        LivePass.initWithCustomerKey(Constants.KEY.CUSTOMER, andSettings: settingsData)
         LivePass.toggleTraces(true)
         
         let vc = HQLoginViewController()

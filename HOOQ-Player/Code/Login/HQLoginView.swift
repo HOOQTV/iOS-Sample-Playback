@@ -44,10 +44,7 @@ final class HQLoginView: UIView {
     
     private let loginButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = UIColor(red: 18/255.0,
-                                         green: 18/255.0,
-                                         blue: 18/255.0,
-                                         alpha: 1.0)
+        button.backgroundColor = UIColor(red: 149/255.0, green: 27/255.0, blue: 129/255.0, alpha: 1.0)
         button.setTitle("Login", for: .normal)
         return button
     }()

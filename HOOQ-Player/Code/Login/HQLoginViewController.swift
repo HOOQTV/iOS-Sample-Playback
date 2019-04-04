@@ -52,8 +52,16 @@ final class HQLoginViewController: UIViewController, HQLoginViewDelegate {
             }
         }, onFailure: {
             HQServiceResponseBlock -> Void in
-            DispatchQueue.main.sync {
+            print("login failure HQServiceResponseBlock = \(String(describing: HQServiceResponseBlock))")
+            
+            if let response = HQServiceResponseBlock as? NSDictionary {
+                print("failure response = \(response)")
+            } else {
+                print("error to cast HQServiceResponseBlock to NSDictionary")
             }
+            
+//            DispatchQueue.main.sync {
+//            }
         })
     
     }

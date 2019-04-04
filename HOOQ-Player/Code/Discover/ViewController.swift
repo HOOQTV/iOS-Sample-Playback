@@ -40,6 +40,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         } else {
             self.updateTableView()
         }
+        self.contentTableView.tableFooterView = UIView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -55,11 +56,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         self.contentIdArray.removeAllObjects()
         self.contentNameArray.removeAllObjects()
         
-        self.contentNameArray.add("MIB")
-        contentIdArray.add("e53579d4-cba9-4d1f-828d-bed04c782e92")
-        
-        self.contentNameArray.add("MIB Long Duration")
-        contentIdArray.add("9de5a8f3-1e8d-4bb0-a637-e22b242b8b19")
+        self.contentNameArray.add("John Wick 2")
+        contentIdArray.add("5458daa6-ff79-468b-8cb5-4952fd82501e")
 
         self.contentTableView.reloadData()
     }
@@ -122,6 +120,7 @@ extension ViewController {
                                                     HQServiceResponseBlock -> Void in
             let response : NSDictionary? = HQServiceResponseBlock as? NSDictionary
             
+            print("PlayAPI success response = \(response)")
             let playData : NSDictionary? = response?.object(forKey: "data") as? NSDictionary
             guard let jsonData = try? JSONSerialization.data(withJSONObject: playData!, options: .prettyPrinted),
                 let jsonO = try? JSON(data: jsonData),
@@ -139,6 +138,8 @@ extension ViewController {
             }
         }, onFailure: {
             HQServiceResponseBlock -> Void in
+            let response : NSDictionary? = HQServiceResponseBlock as? NSDictionary
+            print("PlayAPI failure response = \(response)")
             DispatchQueue.main.sync {
                 self.loader.startAnimating()
 //                self.callRefreshTokenAPI()
