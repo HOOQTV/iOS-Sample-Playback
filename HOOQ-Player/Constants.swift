@@ -9,14 +9,14 @@
 struct Constants {
     struct KEY {
         static let GATEWAY_URL = "gatewayUrl"
-        static let CUSTOMER = "bca0744c446707fcc1435247201a0ab875413aa3" // Conviva
+        static let CUSTOMER = "b032d1138c0bcf37f920408a26af5b2338a38e3b" // Conviva
         static let LICENSE = "LICENSE_KEY"
         static let MANIFEST = "MANIFEST_KEY"
         static let FAIRPLAY_CERT = "http://api-sandbox.hooq.tv/2.0/afp/certificate/Singtel-Fairplay.cer"
     }
     
     struct VALUE {
-        static let GATEWAY_URL = "https://hooq-test.testonly.conviva.com" //Conviva
+        static let GATEWAY_URL = "https://hooq-vodafone-test.testonly.conviva.com" //Conviva
     }
     
     
