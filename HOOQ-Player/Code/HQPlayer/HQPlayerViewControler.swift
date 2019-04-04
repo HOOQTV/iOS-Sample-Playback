@@ -125,6 +125,7 @@ extension HQPlayerViewController {
     private func initializePlayer() {
         guard let url = URL(string: videoItem.content) else { return }
         let asset = AVURLAsset(url: url)
+        print("asset URL = \(url)")
         let playerItem = AVPlayerItem(asset: asset)
         player = AVPlayer.init(playerItem: playerItem)
         asset.resourceLoader.setDelegate(self, queue: DispatchQueue.main)
