@@ -69,7 +69,7 @@ extension HQAPIManager {
 extension HQAPIManager {
     
     func signInAPI(with username: String, onCompletionBlock:@escaping HQServiceResponseBlock, onFailure:@escaping HQServiceResponseBlock) -> Void {
-        let urlString:String = String(format: "%@/%@/user/signin",Constants.APIURL.DEFAULT_URL,Constants.VersionSupport.Version)
+        let urlString:String = String(format: "%@/%@/user/signin",Constants.APIURL.SANDBOX_URL,Constants.VersionSupport.Version)
         //let urlString:String = "https://api-nightly.hooq.tv/2.0/user/signin"
         print("URL = \(urlString)")
         var request = NSMutableURLRequest(url: NSURL(string: urlString)! as URL)
@@ -86,7 +86,7 @@ extension HQAPIManager {
                           "device": deviceInfo]
         //"ipAddress": "139.228.188.138",
         //"meta": ["hmac": "bypass"]
-        let meta = ["hmac": "Key0|+FqEdNskn8rFTqWkDRdizJ+6Oy09/+fXp0HTcZlWpUM="] //hmac calculation is failing, so it's hard coded
+        let meta = ["hmac": "Key10|LSz4IFHuplrJZaEK1yAQlBbzbZk16Ir35aQa1Ue/NJU="] //hmac calculation is failing, so it's hard coded
         requestData.setValue(parameters, forKey: "data")
         requestData.setValue(meta, forKey: "meta")
         
@@ -126,7 +126,7 @@ extension HQAPIManager {
     
     func callTokenAPI(onCompletionBlock:@escaping HQServiceResponseBlock, onFailure:@escaping HQServiceResponseBlock) -> Void {
         
-        let urlString:String = String(format: "%@/%@/user/token/refresh",Constants.APIURL.DEFAULT_URL,Constants.VersionSupport.Version)
+        let urlString:String = String(format: "%@/%@/user/token/refresh",Constants.APIURL.SANDBOX_URL,Constants.VersionSupport.Version)
         //let urlString:String = "http://api-nightly.hooq.tv/2.0/user/token/refresh"
         var request = NSMutableURLRequest(url: NSURL(string: urlString)! as URL)
         let session = URLSession.shared
@@ -175,7 +175,7 @@ extension HQAPIManager {
     func callNativePlayAPI(contentId:String,
                            onCompletionBlock:@escaping HQServiceResponseBlock,
                            onFailure:@escaping HQServiceResponseBlock) -> Void {
-        let urlString:String = String(format: "%@/%@/play/%@",Constants.APIURL.DEFAULT_URL,Constants.VersionSupport.Version,contentId)
+        let urlString:String = String(format: "%@/%@/play/%@",Constants.APIURL.SANDBOX_URL,Constants.VersionSupport.Version,contentId)
         //let urlString = String(format: "http:/api-nightly.hooq.tv/2.0/play/%@",contentId)
         var request = NSMutableURLRequest(url: NSURL(string: urlString)! as URL)
         let session = URLSession.shared
@@ -215,7 +215,7 @@ extension HQAPIManager {
                               currentPlayTime:TimeInterval, onCompletionBlock:@escaping HQServiceResponseBlock,
                               onFailure:@escaping HQServiceResponseBlock) -> Void {
         
-        let urlString:String = String(format: "%@/%@/play/%@",Constants.APIURL.DEFAULT_URL,Constants.VersionSupport.Version,contentId)
+        let urlString:String = String(format: "%@/%@/play/%@",Constants.APIURL.SANDBOX_URL,Constants.VersionSupport.Version,contentId)
         //let urlString:String = String(format: "http:/api-nightly.hooq.tv/2.0/play/%@",contentId)
         var request = NSMutableURLRequest(url: NSURL(string: urlString)! as URL)
         let session = URLSession.shared

@@ -57,8 +57,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         self.contentIdArray.removeAllObjects()
         self.contentNameArray.removeAllObjects()
         
-        self.contentNameArray.add("John Wick 2")
-        contentIdArray.add("5458daa6-ff79-468b-8cb5-4952fd82501e")
+        self.contentNameArray.add("La La Land")
+        contentIdArray.add("ac1f0717-b9d7-47b3-b60a-c09da5b93765")
 
         self.contentTableView.reloadData()
     }

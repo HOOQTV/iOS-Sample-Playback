@@ -33,7 +33,7 @@ struct Constants {
 
     struct RequestHeader {
         
-        static let ApiKey = "fTKW6APUbOH4K36tLcZSYLHCbUQ7vXcF"
+        static let ApiKey = "8Ht3nmI0F8mvPKVpvdQBDY7aHmsWFEkd"
         static let ContentType = "application/json"
         static let PostmanToken = "84f2c462-3836-4c95-b996-2a74df2b860b"
         static let ConsumerCustom = ""
