@@ -32,6 +32,11 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.hidesBackButton = true
+        let btnLogout = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(userLogout(sender:)))
+        self.navigationItem.leftBarButtonItem = btnLogout
+        
         self.title = "HOOQ"
 
         let result = UserDefaults.standard.value(forKey: "AuthorizationToken")
@@ -57,8 +62,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         self.contentIdArray.removeAllObjects()
         self.contentNameArray.removeAllObjects()
         
-        self.contentNameArray.add("La La Land")
-        contentIdArray.add("ac1f0717-b9d7-47b3-b60a-c09da5b93765")
+        self.contentNameArray.add("Pretty Woman")
+        self.contentNameArray.add("The Oath S1E1")
+        self.contentIdArray.add("02a6b7d0-69fb-465e-8cd5-17e4ebcbedc2")
+        contentIdArray.add("97c44b21-f398-43e9-ad3a-d58a2b410072")
 
         self.contentTableView.reloadData()
     }
@@ -66,6 +73,21 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func userLogout(sender: UIBarButtonItem) {
+        HQAPIManager.shared().signOutAPI(onSuccess: { isSuccess in
+            if isSuccess {
+                DispatchQueue.main.async {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            } else {
+                let alert = UIAlertController(title: "Error", message: "Failed to logout user", preferredStyle: .alert)
+                let btnOK = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(btnOK)
+                self.present(alert, animated: true, completion: nil)
+            }
+        })
     }
 }
 
@@ -121,8 +143,7 @@ extension ViewController {
                                                 onCompletionBlock: {
                                                     HQServiceResponseBlock -> Void in
             let response : NSDictionary? = HQServiceResponseBlock as? NSDictionary
-            
-            print("PlayAPI success response = \(response)")
+            print("PlayAPI success response = \(String(describing: response))")
             let playData : NSDictionary? = response?.object(forKey: "data") as? NSDictionary
             guard let jsonData = try? JSONSerialization.data(withJSONObject: playData!, options: .prettyPrinted),
                 let jsonO = try? JSON(data: jsonData),
@@ -141,7 +162,7 @@ extension ViewController {
         }, onFailure: {
             HQServiceResponseBlock -> Void in
             let response : NSDictionary? = HQServiceResponseBlock as? NSDictionary
-            print("PlayAPI failure response = \(response)")
+            print("PlayAPI failure response = \(String(describing: response))")
             DispatchQueue.main.sync {
                 self.loader.startAnimating()
 //                self.callRefreshTokenAPI()

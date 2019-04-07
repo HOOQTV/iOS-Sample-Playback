@@ -64,14 +64,42 @@ extension HQAPIManager {
         request.addValue(Constants.RequestHeader.CachePolicy, forHTTPHeaderField: "Cache-Control")
         return request
     }
+    
+    func signOutAPIHeader(request:NSMutableURLRequest) -> NSMutableURLRequest{
+        request.addValue(Constants.RequestHeader.ContentType, forHTTPHeaderField: "Content-Type")
+        request.addValue("Bearer " + (UserDefaults.standard.value(forKey: "AuthorizationToken") as? String ?? ""), forHTTPHeaderField: "Authorization")
+        request.addValue(Constants.RequestHeader.ApiKey, forHTTPHeaderField: "apikey")
+        return request
+    }
 }
 
 extension HQAPIManager {
     
+    func signOutAPI(onSuccess: @escaping (Bool)->Void) {
+        let urlString = "\(Constants.APIURL.SANDBOX_URL)/\(Constants.VersionSupport.Version)/user/signout"
+        
+        var request = NSMutableURLRequest(url: URL(string: urlString)! as URL)
+        
+        let session = URLSession.shared
+        
+        request = signOutAPIHeader(request: request)
+        request.httpMethod = "POST"
+        
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
+            if let resp = response as? HTTPURLResponse , resp.statusCode == 200 {
+                onSuccess(true)
+            } else {
+                print("resp.statusCode = \(String(describing: (response as? HTTPURLResponse)?.statusCode))")
+                onSuccess(false)
+            }
+        })
+        task.resume()
+        
+    }
+    
     func signInAPI(with username: String, onCompletionBlock:@escaping HQServiceResponseBlock, onFailure:@escaping HQServiceResponseBlock) -> Void {
         let urlString:String = String(format: "%@/%@/user/signin",Constants.APIURL.SANDBOX_URL,Constants.VersionSupport.Version)
         //let urlString:String = "https://api-nightly.hooq.tv/2.0/user/signin"
-        print("URL = \(urlString)")
         var request = NSMutableURLRequest(url: NSURL(string: urlString)! as URL)
         let session = URLSession.shared
         let deviceInfo = ["serialNo": "DEFAULT", //c0befd3745203f3af5eb0737fc6aa205
@@ -89,8 +117,6 @@ extension HQAPIManager {
         let meta = ["hmac": "Key10|LSz4IFHuplrJZaEK1yAQlBbzbZk16Ir35aQa1Ue/NJU="] //hmac calculation is failing, so it's hard coded
         requestData.setValue(parameters, forKey: "data")
         requestData.setValue(meta, forKey: "meta")
-        
-        print("requestData = \(requestData)")
 
         let jsonData = try! JSONSerialization.data(withJSONObject: requestData, options: JSONSerialization.WritingOptions.prettyPrinted)
         

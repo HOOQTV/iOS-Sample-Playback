@@ -31,7 +31,9 @@ extension AVPlayer {
     }
     
     func seek(to value: Float) {
-        let cmTime = CMTimeMake(Int64(value * 1000), 1000)
-        seek(to: cmTime)
+        if !(value.isNaN || value.isInfinite) {
+            let cmTime = CMTimeMake(Int64(value * 1000), 1000)
+            seek(to: cmTime)
+        }
     }
 }

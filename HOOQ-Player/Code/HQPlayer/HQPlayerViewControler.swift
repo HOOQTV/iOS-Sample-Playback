@@ -125,7 +125,6 @@ extension HQPlayerViewController {
     private func initializePlayer() {
         guard let url = URL(string: videoItem.content) else { return }
         let asset = AVURLAsset(url: url)
-        print("asset URL = \(url)")
         let playerItem = AVPlayerItem(asset: asset)
         player = AVPlayer.init(playerItem: playerItem)
         asset.resourceLoader.setDelegate(self, queue: DispatchQueue.main)
@@ -312,7 +311,7 @@ extension HQPlayerViewController: AVAssetResourceLoaderDelegate {
         print("🔑", #function, url)
         print("=================", url)
         
-        let certificateURL = URL.init(string: "http://api-sandbox.hooq.tv/2.0/afp/certificate/Singtel-Fairplay.cer")!
+        let certificateURL = URL.init(string: videoItem.certificate)! //"http://api-sandbox.hooq.tv/2.0/afp/certificate/Singtel-Fairplay.cer"
         
         guard let certificateData = try? Data(contentsOf: certificateURL) else {
             print("🔑", #function, "Unable to read the certificate data.")
@@ -381,10 +380,10 @@ extension HQPlayerViewController {
         
         HQAPIManager.shared().callPlayHeartBeatAPI(contentId: videoContentId, contentTime: TimeInterval(durationTimeInterval), currentPlayTime: TimeInterval(currentTimeInterval), onCompletionBlock: {        
             HQServiceResponseBlock -> Void in
-            print("Success")
+            print("HeartBeatAPI Success")
         }, onFailure: {
             HQServiceResponseBlock -> Void in
-            print("Fail")
+            print("HeartBeatAPI Fail")
         })
     }
 }
