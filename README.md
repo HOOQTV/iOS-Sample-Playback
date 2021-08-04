@@ -1,5 +1,7 @@
 # sample_playback
 
+**Migrated to https://github.coupang.net/coupang/couplay-iOS-Sample-Playback**
+
 Requirements:
 1. XCode 10 (minimum)
 2. Update Cocoapod before running pod install to get the latest version of the libraries
